@@ -4,27 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculater</title>
-    <style>
-      body {
-        background-color: black;
-      }
-      button {
-        border: none;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        background-color: rgb(51, 51, 51);
-        font-size: 18px;
-      }
-      .Output {
-        color: white;
-        font-size: 25px;
-      }
-      .orange {
-        background-color: orange;
-      }
-    </style>
+    <link rel="stylesheet" href="calculator.css" />
   </head>
   <body>
     <p class="js-output Output">Output here</p>
@@ -143,16 +123,6 @@
     >
       clear
     </button>
-    <script>
-      let calculation = "";
-      function getValue(value) {
-        calculation += value;
-        document.querySelector(".js-output").innerHTML = calculation;
-      }
-      function evaluation() {
-        calculation = eval(calculation);
-        document.querySelector(".js-output").innerHTML = calculation;
-      }
-    </script>
+    <script src="calculator.js"></script>
   </body>
 </html>
