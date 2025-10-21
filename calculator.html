@@ -27,29 +27,130 @@
   <body>
     <p class="js-output Output">Output here</p>
     <p>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="orange">÷</button>
+      <button
+        onclick="
+      getValue('7')"
+      >
+        7
+      </button>
+      <button
+        onclick="
+      getValue('8')"
+      >
+        8
+      </button>
+      <button
+        onclick="
+      getValue('9')"
+      >
+        9
+      </button>
+      <button
+        class="orange"
+        onclick="
+      getValue('/')"
+      >
+        ÷
+      </button>
     </p>
     <p>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button class="orange">x</button>
+      <button
+        onclick="
+      getValue('4')"
+      >
+        4
+      </button>
+      <button
+        onclick="
+      getValue('5')"
+      >
+        5
+      </button>
+      <button
+        onclick="
+      getValue('6')"
+      >
+        6
+      </button>
+      <button
+        class="orange"
+        onclick="
+      getValue('*')"
+      >
+        x
+      </button>
     </p>
     <p>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="orange">&#8722;</button>
+      <button
+        onclick="
+      getValue('1')"
+      >
+        1
+      </button>
+      <button
+        onclick="
+      getValue('2')"
+      >
+        2
+      </button>
+      <button
+        onclick="
+      getValue('3')"
+      >
+        3
+      </button>
+      <button
+        onclick="
+      getValue('-')"
+        class="orange"
+      >
+        &#8722;
+      </button>
     </p>
     <p>
-      <button>0</button>
-      <button>&#x2e;</button>
-      <button>=</button>
-      <button class="orange">+</button>
+      <button
+        onclick="
+      getValue('0')"
+      >
+        0
+      </button>
+      <button
+        onclick="
+      getValue('.')"
+      >
+        &#x2e;
+      </button>
+      <button
+        onclick="
+      evaluation()"
+      >
+        =
+      </button>
+      <button
+        onclick="
+      getValue('+')"
+        class="orange"
+      >
+        +
+      </button>
     </p>
-    <button>clear</button>
+    <button
+      onclick="
+    calculation = '';
+    document.querySelector('.js-output').innerHTML = calculation;"
+    >
+      clear
+    </button>
+    <script>
+      let calculation = "";
+      function getValue(value) {
+        calculation += value;
+        document.querySelector(".js-output").innerHTML = calculation;
+      }
+      function evaluation() {
+        calculation = eval(calculation);
+        document.querySelector(".js-output").innerHTML = calculation;
+      }
+    </script>
   </body>
 </html>
